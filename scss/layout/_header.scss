@@ -1,3 +1,7 @@
+%flexItemsCenter {
+    display: flex;
+    align-items: center;
+}
 .header {
     background-color: #eee;
 }
@@ -10,13 +14,11 @@
     margin-left: 144px;
     margin-right: auto;
     &__list {
-        display: flex;
-        align-items: center;
+        @extend %flexItemsCenter;
         column-gap: 30px;
     }
     &__link {
-        display: flex;
-        align-items: center;
+        @extend %flexItemsCenter;
         column-gap: 6px;
         font-size: 1.5rem;
         font-weight: 500;
@@ -27,12 +29,10 @@
     }
 }
 .top-act {
-    display: flex;
-    align-items: center;
+    @extend %flexItemsCenter;
     column-gap: 20px;
     &__group {
-        display: flex;
-        align-items: center;
+        @extend %flexItemsCenter;
         min-width: 50px;
         height: 50px;
         border-radius: 8px;
@@ -43,10 +43,10 @@
         padding: 13px;
     }
     &__btn {
-        display: flex;
-        align-items: center;
+        @extend %flexItemsCenter;
         column-gap: 10px;
         padding: 13px 20px;
+        cursor: pointer;
     }
     &__title {
         font-size: 1.5rem;
@@ -65,5 +65,6 @@
         height: 50px;
         object-fit: cover;
         box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
     }
 }
