@@ -14,6 +14,7 @@
         padding: 20px 0;
     }
     @include abstracts.breakpoint(sm) {
+        justify-content: space-between;
         padding: 16px 0;
     }
     &__more {
@@ -50,6 +51,9 @@
     @extend %flexItemsCenter;
     column-gap: 20px;
     margin-left: auto;
+    @include abstracts.breakpoint(sm) {
+        margin-left: initial;
+    }
     &__group {
         @extend %flexItemsCenter;
         min-width: 50px;

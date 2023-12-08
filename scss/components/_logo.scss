@@ -5,7 +5,10 @@
     column-gap: 14px;
     @include abstracts.breakpoint(lg) {
         column-gap: 10px;
-        margin-left: 39px;
+        margin-left: 40px;
+    }
+    @include abstracts.breakpoint(sm) {
+        margin-left: initial;
     }
     &__title {
         font-size: 2.2rem;
