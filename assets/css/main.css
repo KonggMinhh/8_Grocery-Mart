@@ -1231,6 +1231,11 @@ html {
 .header {
   background-color: var(--header-bg-color);
 }
+@media (max-width: 991.98px) {
+  .header {
+    min-width: 100px;
+  }
+}
 
 .top-bar {
   display: flex;
