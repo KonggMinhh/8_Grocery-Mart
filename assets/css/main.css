@@ -1431,11 +1431,12 @@ html {
 
 .top-menu {
   --main-column-width: 292px;
+  --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
 }
 .top-menu__main {
   width: var(--main-column-width);
-  height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
@@ -1512,6 +1513,14 @@ html {
   column-gap: var(--inner-padding);
   padding-left: var(--inner-padding);
   overflow-y: auto;
+}
+.sub-menu--not-main {
+  display: grid;
+  position: initial;
+  inset: initial;
+  padding-left: initial;
+  grid-template-columns: repeat(4, 1fr);
+  height: var(--max-inner-height);
 }
 
 /*# sourceMappingURL=main.css.map */
