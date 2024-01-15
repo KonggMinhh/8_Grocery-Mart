@@ -1,7 +1,7 @@
 <div class="container">
     <div class="top-bar">
         <!-- More  -->
-        <button class="top-bar__more">
+        <button class="top-bar__more js-toggle" toggle-target="#navbar">
             <img
                 src="./assets/icons/more.svg"
                 alt="More"
@@ -18,7 +18,10 @@
             <h1 class="logo__title">grocerymart</h1>
         </a>
         <!-- Navbar -->
-        <nav class="navbar">
+        <nav id="navbar" class="navbar hide">
+            <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
+                <img src="./assets/icons/arrow-left.svg" alt="" />
+            </button>
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link"
@@ -8256,17 +8259,11 @@
                                 <!-- * * *  SUBMENU ITEM  * * *-->
                                 <div class="sub-menu sub-menu--not-main">
                                     <!-- Sub Menu Column 1 -->
-                                    <div
-                                        class="sub-menu__column"
-                                    >
+                                    <div class="sub-menu__column">
                                         <!-- Menu Item 1 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate-2.1.svg"
                                                     class="menu-column__icon-1"
@@ -8277,17 +8274,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Grocery
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -8325,13 +8318,9 @@
                                             </div>
                                         </div>
                                         <!-- Menu Item 2 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.1.svg"
                                                     class="menu-column__icon-1"
@@ -8342,17 +8331,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Fresh Produce
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -8372,7 +8357,8 @@
                                                             href="#!"
                                                             class="menu-column__link"
                                                         >
-                                                            Celebrate Salad Month
+                                                            Celebrate Salad
+                                                            Month
                                                         </a>
                                                     </li>
                                                     <!-- Item 3 -->
@@ -8457,17 +8443,11 @@
                                         </div>
                                     </div>
                                     <!-- Sub Menu Column 2 -->
-                                    <div
-                                        class="sub-menu__column"
-                                    >
+                                    <div class="sub-menu__column">
                                         <!-- Menu Item  -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.3.svg"
                                                     class="menu-column__icon-1"
@@ -8478,17 +8458,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
-                                                        Bakery & Bread
+                                                    Bakery & Bread
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -8581,13 +8557,9 @@
                                             </div>
                                         </div>
                                         <!-- Menu Item  -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.5.svg"
                                                     class="menu-column__icon-1"
@@ -8598,17 +8570,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Frozen
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -8639,7 +8607,8 @@
                                                             href="#!"
                                                             class="menu-column__link"
                                                         >
-                                                            Frozen Meals & Snacks
+                                                            Frozen Meals &
+                                                            Snacks
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -8647,17 +8616,11 @@
                                         </div>
                                     </div>
                                     <!-- Sub Menu Column 3 -->
-                                    <div
-                                        class="sub-menu__column"
-                                    >
+                                    <div class="sub-menu__column">
                                         <!-- Menu Item 1 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.7.svg"
                                                     class="menu-column__icon-1"
@@ -8668,17 +8631,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Snacks
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -8738,13 +8697,9 @@
                                             </div>
                                         </div>
                                         <!-- Menu Item 2 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.9.svg"
                                                     class="menu-column__icon-1"
@@ -8755,17 +8710,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Candy
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -8848,17 +8799,11 @@
                                         </div>
                                     </div>
                                     <!-- Sub Menu Column 4 -->
-                                    <div
-                                        class="sub-menu__column"
-                                    >
+                                    <div class="sub-menu__column">
                                         <!-- Menu Item 1 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-3.1.svg"
                                                     class="menu-column__icon-1"
@@ -8869,17 +8814,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Cocktails & Mixes Coffee
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -8928,13 +8869,9 @@
                                             </div>
                                         </div>
                                         <!-- Menu Item 2 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-3.3.svg"
                                                     class="menu-column__icon-1"
@@ -8945,17 +8882,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Beverages
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9041,7 +8974,8 @@
                                                             href="#!"
                                                             class="menu-column__link"
                                                         >
-                                                            Hot Chocolate & Cocoa
+                                                            Hot Chocolate &
+                                                            Cocoa
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -9070,17 +9004,11 @@
                                 <!-- * * *  SUBMENU ITEM  * * *-->
                                 <div class="sub-menu sub-menu--not-main">
                                     <!-- Sub Menu Column 1 -->
-                                    <div
-                                        class="sub-menu__column"
-                                    >
+                                    <div class="sub-menu__column">
                                         <!-- Menu Item 1 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate-2.1.svg"
                                                     class="menu-column__icon-1"
@@ -9091,17 +9019,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Grocery
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9139,13 +9063,9 @@
                                             </div>
                                         </div>
                                         <!-- Menu Item 2 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.1.svg"
                                                     class="menu-column__icon-1"
@@ -9156,17 +9076,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Fresh Produce
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9186,7 +9102,8 @@
                                                             href="#!"
                                                             class="menu-column__link"
                                                         >
-                                                            Celebrate Salad Month
+                                                            Celebrate Salad
+                                                            Month
                                                         </a>
                                                     </li>
                                                     <!-- Item 3 -->
@@ -9271,17 +9188,11 @@
                                         </div>
                                     </div>
                                     <!-- Sub Menu Column 2 -->
-                                    <div
-                                        class="sub-menu__column"
-                                    >
+                                    <div class="sub-menu__column">
                                         <!-- Menu Item  -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.3.svg"
                                                     class="menu-column__icon-1"
@@ -9292,17 +9203,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
-                                                        Bakery & Bread
+                                                    Bakery & Bread
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9395,13 +9302,9 @@
                                             </div>
                                         </div>
                                         <!-- Menu Item  -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.5.svg"
                                                     class="menu-column__icon-1"
@@ -9412,17 +9315,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Frozen
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9453,7 +9352,8 @@
                                                             href="#!"
                                                             class="menu-column__link"
                                                         >
-                                                            Frozen Meals & Snacks
+                                                            Frozen Meals &
+                                                            Snacks
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -9461,17 +9361,11 @@
                                         </div>
                                     </div>
                                     <!-- Sub Menu Column 3 -->
-                                    <div
-                                        class="sub-menu__column"
-                                    >
+                                    <div class="sub-menu__column">
                                         <!-- Menu Item 1 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.7.svg"
                                                     class="menu-column__icon-1"
@@ -9482,17 +9376,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Snacks
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9552,13 +9442,9 @@
                                             </div>
                                         </div>
                                         <!-- Menu Item 2 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-2.9.svg"
                                                     class="menu-column__icon-1"
@@ -9569,17 +9455,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Candy
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9662,17 +9544,11 @@
                                         </div>
                                     </div>
                                     <!-- Sub Menu Column 4 -->
-                                    <div
-                                        class="sub-menu__column"
-                                    >
+                                    <div class="sub-menu__column">
                                         <!-- Menu Item 1 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-3.1.svg"
                                                     class="menu-column__icon-1"
@@ -9683,17 +9559,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Cocktails & Mixes Coffee
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9742,13 +9614,9 @@
                                             </div>
                                         </div>
                                         <!-- Menu Item 2 -->
-                                        <div
-                                            class="menu-column"
-                                        >
+                                        <div class="menu-column">
                                             <!-- Top Menu Icons -->
-                                            <div
-                                                class="menu-column__icon"
-                                            >
+                                            <div class="menu-column__icon">
                                                 <img
                                                     src="./assets/img/category/cate2-3.3.svg"
                                                     class="menu-column__icon-1"
@@ -9759,17 +9627,13 @@
                                                 />
                                             </div>
                                             <!-- Top Menu Content -->
-                                            <div
-                                                class="menu-column__content"
-                                            >
+                                            <div class="menu-column__content">
                                                 <h2
                                                     class="menu-column__heading"
                                                 >
                                                     Beverages
                                                 </h2>
-                                                <ul
-                                                    class="menu-column__list"
-                                                >
+                                                <ul class="menu-column__list">
                                                     <!-- Item 1 -->
                                                     <li
                                                         class="menu-column__item"
@@ -9855,7 +9719,8 @@
                                                             href="#!"
                                                             class="menu-column__link"
                                                         >
-                                                            Hot Chocolate & Cocoa
+                                                            Hot Chocolate &
+                                                            Cocoa
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -9869,6 +9734,7 @@
                 </li>
             </ul>
         </nav>
+        <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
         <!-- Actions -->
         <div class="top-act">
             <!-- Group 1 -->

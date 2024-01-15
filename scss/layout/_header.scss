@@ -15,7 +15,7 @@
     position: relative;
     padding: 30px 0;
     @include abstracts.breakpoint(lg) {
-        padding: 20px 0;
+        padding: 40px 0;
     }
     @include abstracts.breakpoint(md) {
         justify-content: space-between;
@@ -34,14 +34,57 @@
         margin-left: 25px;
     }
     @include abstracts.breakpoint(lg) {
+        position: fixed;
+        inset: 0 50% 0 0;
+        z-index: 9;
+        padding: 20px;
+        background: antiquewhite;
+        margin-left: initial;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        &.show {
+            transform: translateX(0);
+        }
+        &.show ~ .navbar__overlay {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    &__close-btn {
         display: none;
+        @include abstracts.breakpoint(lg) {
+            display: block;
+            padding: initial;
+        }
+    }
+    &__overlay {
+        visibility: hidden;
+        opacity: 0;
+        @include abstracts.breakpoint(lg) {
+            position: fixed;
+            inset: 0;
+            z-index: 8;
+            background: rgba($color: #000000, $alpha: 0.4);
+            transition: opacity, visibility;
+            transition-duration: 0.5s;
+        }
     }
     &__list {
         @extend %flexItemsCenter;
+        @include abstracts.breakpoint(lg) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     &__item {
         &:hover .dropdown {
             display: block;
+        }
+        @include abstracts.breakpoint(lg) {
+            width: 100%;
+            &:hover .dropdown {
+                display: none;
+            }
         }
     }
     &__link {
@@ -52,6 +95,12 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+        @include abstracts.breakpoint(lg) {
+            padding: initial;
+            font-size: 1.6rem;
+            line-height: 150%;
+            justify-content: space-between;
+        }
     }
     &__arrow {
         margin-top: 3px;
