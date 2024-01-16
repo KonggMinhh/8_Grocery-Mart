@@ -21,12 +21,7 @@
         justify-content: space-between;
         padding: 16px 0;
     }
-    &__more {
-        display: none;
-        @include abstracts.breakpoint(lg) {
-            display: block;
-        }
-    }
+    
 }
 .navbar {
     margin-left: 129px;
@@ -120,9 +115,6 @@
         border-radius: 8px;
         background: var(--top-act-group-bg-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
-        @include abstracts.breakpoint(md) {
-            display: none;
-        }
     }
     &__group--single {
         @include abstracts.breakpoint(lg) {
