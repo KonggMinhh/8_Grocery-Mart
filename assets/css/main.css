@@ -153,6 +153,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
@@ -1429,6 +1430,12 @@ html {
   .navbar__item {
     width: 100%;
   }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
+  .navbar__item--active .dropdown {
+    display: block !important;
+  }
 }
 .navbar__link {
   height: 50px;
@@ -1448,6 +1455,15 @@ html {
 }
 .navbar__arrow {
   margin-top: 3px;
+}
+@media (max-width: 991.98px) {
+  .navbar__arrow {
+    rotate: -90deg;
+    transition: rotate 0.3s;
+  }
+}
+.navbar__item--active .navbar__arrow {
+  rotate: 0deg;
 }
 
 .top-act {
@@ -1541,7 +1557,6 @@ html {
 @media (max-width: 991.98px) {
   .dropdown {
     padding-top: initial;
-    display: block;
     position: initial;
   }
 }

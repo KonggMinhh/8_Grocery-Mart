@@ -7,7 +7,6 @@
     display: none;
     @include abstracts.breakpoint(lg) {
         padding-top: initial;
-        display: block;
         position: initial;
     }
     &__inner {

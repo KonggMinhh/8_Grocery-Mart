@@ -167,3 +167,15 @@ function initJsToggle() {
         };
     });
 }
+window.addEventListener("template-loaded", () => {
+    const links = $$(".js-dropdown-list > li > a");
+    console.log("🚀 ~ window.addEventListener ~ links:", links)
+
+    links.forEach((link) => {
+        link.onclick = () => {
+            if (window.innerWidth > 991) return;
+            const item = link.closest("li");
+            item.classList.toggle("navbar__item--active");
+        };
+    });
+});
