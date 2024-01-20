@@ -1307,6 +1307,8 @@ html.dark {
   --menu-column-icon-color: brightness(0) saturate(100%) invert(100%)
       sepia(10%) saturate(3491%) hue-rotate(115deg) brightness(122%)
       contrast(97%);
+  --sidebar-bg: #292e39;
+  --sidebar-shadow: rgba(23, 28, 40, 0.4);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1327,6 +1329,8 @@ html {
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --dropdown-arrow-color: #fff;
   --top-menu-border-color: #d2d1d6;
+  --sidebar-bg: #fff;
+  --sidebar-shadow: rgba(200, 200, 200, 0.4);
 }
 @media (max-width: 991.98px) {
   html {
@@ -1379,17 +1383,24 @@ html {
     inset: 0 50% 0 0;
     z-index: 9;
     padding: 20px;
-    background: #fff;
+    border-radius: 0 20px 20px 0;
+    background: var(--sidebar-bg);
     margin-left: initial;
     transform: translateX(-100%);
     transition: transform 0.5s ease-in-out;
   }
   .navbar.show {
     transform: translateX(0);
+    box-shadow: 0px 40px 90px 20px var(--sidebar-shadow);
   }
   .navbar.show ~ .navbar__overlay {
     visibility: visible;
     opacity: 1;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar {
+    inset: 0 20% 0 0;
   }
 }
 .navbar__close-btn {
@@ -1420,7 +1431,17 @@ html {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
-    height: calc(100% - 26px);
+    height: calc(100% - 40px);
+  }
+}
+@media (max-width: 767.98px) {
+  .navbar__list {
+    height: calc(100% - 140px);
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__list {
+    height: calc(100% - 124px);
   }
 }
 .navbar__item:hover .dropdown {
@@ -1451,6 +1472,11 @@ html {
     font-size: 1.6rem;
     line-height: 150%;
     justify-content: space-between;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar__link {
+    height: 44px;
   }
 }
 .navbar__arrow {
@@ -1513,6 +1539,25 @@ html {
   object-fit: cover;
   box-shadow: 0px 4px 14px 2px rgba(0, 0, 0, 0.08);
   cursor: pointer;
+}
+
+.nav-btn {
+  height: 50px;
+  align-items: center;
+}
+@media (max-width: 575.98px) {
+  .nav-btn {
+    height: 44px;
+  }
+}
+.nav-btn__title, .nav-btn__qnt {
+  margin-left: 16px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 146.667%;
+}
+.nav-btn__qnt {
+  margin-left: auto;
 }
 
 .logo {

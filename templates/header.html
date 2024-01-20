@@ -1,7 +1,10 @@
 <div class="container">
     <div class="top-bar">
         <!-- More  -->
-        <button class="top-bar__more d-none d-lg-block js-toggle" toggle-target="#navbar">
+        <button
+            class="top-bar__more d-none d-lg-block js-toggle"
+            toggle-target="#navbar"
+        >
             <img
                 src="./assets/icons/more.svg"
                 alt="More"
@@ -20,8 +23,26 @@
         <!-- Navbar -->
         <nav id="navbar" class="navbar hide">
             <button class="navbar__close-btn js-toggle" toggle-target="#navbar">
-                <img src="./assets/icons/arrow-left.svg" alt="" />
+                <img src="./assets/icons/arrow-left.svg" class="icon" alt="" />
             </button>
+            <a href="" class="nav-btn d-none d-md-flex">
+                <img
+                    src="./assets/icons/buy.svg"
+                    alt="Buy"
+                    class="nav-btn__icon icon"
+                />
+                <span class="nav-btn__title">Card</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
+            <a href="" class="nav-btn d-none d-md-flex">
+                <img
+                    src="./assets/icons/heart.svg"
+                    alt="Heart"
+                    class="nav-btn__icon icon"
+                />
+                <span class="nav-btn__title">Card</span>
+                <span class="nav-btn__qnt">3</span>
+            </a>
             <ul class="navbar__list js-dropdown-list">
                 <li class="navbar__item">
                     <a href="#!" class="navbar__link"
@@ -41,7 +62,9 @@
                                     <!-- Menu column -->
                                     <div class="menu-column">
                                         <!-- Top Menu Icons -->
-                                        <div class="menu-column__icon d-lg-none">
+                                        <div
+                                            class="menu-column__icon d-lg-none"
+                                        >
                                             <img
                                                 src="./assets/img/category/cate-1.1.svg"
                                                 class="menu-column__icon-1"
@@ -53,7 +76,9 @@
                                         </div>
                                         <!-- Top Menu Content -->
                                         <div class="menu-column__content">
-                                            <h2 class="menu-column__heading d-lg-none">
+                                            <h2
+                                                class="menu-column__heading d-lg-none"
+                                            >
                                                 All Departments
                                             </h2>
                                             <ul
