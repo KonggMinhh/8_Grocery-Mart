@@ -178,6 +178,13 @@ select {
   border: none;
 }
 
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 .icon {
   filter: var(--icon);
 }
@@ -1978,6 +1985,15 @@ html {
   border-radius: 50%;
   box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
 }
+.like-btn:not(.like-btn--liked) .like-btn__icon--liked {
+  display: none;
+}
+.like-btn--liked .like-btn__icon {
+  display: none;
+}
+.like-btn__icon--liked {
+  margin-top: 11px;
+}
 
 .product-card {
   padding: 16px;
@@ -2039,7 +2055,6 @@ html {
 }
 .home__cate {
   --grid-gutter-x: 51px;
-  margin-top: 20px;
 }
 @media (max-width: 991.98px) {
   .home__cate {
