@@ -170,7 +170,10 @@
                     <div class="home__row">
                         <h2 class="home__heading">Total LavAzza 1320</h2>
                         <div class="filter-wrap">
-                            <button class="filter-btn">
+                            <button
+                                class="filter-btn js-toggle"
+                                toggle-target="#home-filter"
+                            >
                                 Filter
                                 <img
                                     src="./assets/icons/filter.svg"
@@ -179,7 +182,7 @@
                                 />
                             </button>
                             <!-- Form Filter -->
-                            <div class="filter">
+                            <div id="home-filter" class="filter hide">
                                 <img
                                     src="./assets/icons/arrow-up.png"
                                     alt=""
@@ -187,8 +190,8 @@
                                 />
                                 <h3 class="filter__heading">Filter</h3>
                                 <form action="" class="filter__form">
-                                    <!-- Top -->
-                                    <div class="filter__row">
+                                    <!-- Content -->
+                                    <div class="filter__row filter__content">
                                         <!-- Filter column 1 -->
                                         <div class="filter__col">
                                             <label
@@ -267,7 +270,7 @@
                                                         <img
                                                             src="./assets/icons/arrow-down.svg"
                                                             alt=""
-                                                            class="filter__form-select-arrow"
+                                                            class="filter__form-select-arrow icon"
                                                         />
                                                     </div>
                                                     <!-- Select 2 -->
@@ -278,7 +281,7 @@
                                                         <img
                                                             src="./assets/icons/arrow-down.svg"
                                                             alt=""
-                                                            class="filter__form-select-arrow"
+                                                            class="filter__form-select-arrow icon"
                                                         />
                                                     </div>
                                                 </div>
@@ -326,7 +329,7 @@
                                                     <img
                                                         src="./assets/icons/search.svg"
                                                         alt=""
-                                                        class="filter__form-input-icon"
+                                                        class="filter__form-input-icon icon"
                                                     />
                                                 </div>
                                             </div>
@@ -355,12 +358,14 @@
                                     <!-- Button -->
                                     <div class="filter__row filter__footer">
                                         <button
-                                            class="btn btn--text filter__cancel"
+                                            class="btn btn--text filter__cancel js-toggle"
+                                            toggle-target="#home-filter"
                                         >
                                             Cancel
                                         </button>
                                         <button
-                                            class="btn btn--primary filter__submit"
+                                            class="btn btn--primary filter__submit js-toggle"
+                                            toggle-target="#home-filter"
                                         >
                                             Show Result
                                         </button>

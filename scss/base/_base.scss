@@ -38,7 +38,9 @@ select {
     outline: none;
     border: none;
     -webkit-tap-highlight-color: transparent;
-
+}
+input {
+    background: transparent;
 }
 .container {
     @include abstracts.screen(sm) {
