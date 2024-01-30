@@ -8,22 +8,18 @@
     position: absolute;
     right: 0;
     top: 55px;
-    padding: 30px;
     border-radius: 20px;
     background-color: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
     transition: opacity, visibility;
     transition-duration: 0.3s;
 
-    @include abstracts.screen(xl) {
-        height: calc(100vh - 80px);
-        padding-bottom: 0;
-        overflow: auto;
-        overscroll-behavior: contain;
-    }
-
     @include abstracts.screen(sm) {
-        width: 85vw;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        inset: 0;
+        border-radius: initial;
     }
 
     &.hide {
@@ -47,6 +43,7 @@
         &-label {
             display: block;
             @extend .filter__heading;
+            padding: initial !important;
             &--small {
                 margin-bottom: 10px;
                 font-size: 1.4rem;
@@ -56,7 +53,8 @@
         &-group {
             margin-top: 20px;
             &--inline {
-                display: flex;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
                 column-gap: 30px;
             }
         }
@@ -102,6 +100,9 @@
                 width: 121px;
                 height: 36px;
                 padding: 0 12px;
+                @include abstracts.screen(xl) {
+                    width: 100%;
+                }
             }
             @include abstracts.screen(sm) {
                 width: 100%;
@@ -119,6 +120,9 @@
             &::placeholder {
                 color: #9e9da8;
                 font-weight: 400;
+            }
+            @include abstracts.screen(sm) {
+                font-size: 1.6rem;
             }
         }
         &-input-icon {
@@ -141,6 +145,9 @@
             font-weight: 500;
             line-height: 142.857%;
             cursor: pointer;
+            @include abstracts.screen(xl) {
+                width: 100%;
+            }
         }
         &-select + &-select {
             border-left: 1px solid #d2d1d6;
@@ -149,6 +156,9 @@
             display: flex;
             flex-wrap: wrap;
             gap: 10px 20px;
+            @include abstracts.screen(sm) {
+                gap: 10px;
+            }
         }
         &-tag {
             padding: 6px 12px;
@@ -157,7 +167,7 @@
             color: #9e9da8;
             background: var(--filter-form-tag-bg);
 
-            color: var(--Secondary-Color-Secondary-2, #9e9da8);
+            color: #9e9da8;
 
             font-size: 1.4rem;
             font-weight: 500;
@@ -185,11 +195,10 @@
         display: flex;
         justify-content: flex-end;
         margin-top: 32px;
-        @include abstracts.screen(xl) {
+        @include abstracts.screen(sm) {
             position: sticky;
             bottom: 0;
-            padding-bottom: 16px;
-            background: var(--filter-form-bg);
+            background-color: var(--filter-form-bg);
         }
     }
     &__cancel,
@@ -198,6 +207,7 @@
         padding: 0 10px;
         @include abstracts.screen(sm) {
             flex: 1;
+            height: 42px;
         }
     }
     &__cancel {
@@ -206,9 +216,21 @@
     &__submit {
         font-size: 1.4rem;
     }
+    &__heading,
+    &__content,
+    &__footer {
+        padding: 0 30px;
+    }
     .filter__content {
+        max-height: calc(100vh - 350px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
         @include abstracts.screen(xl) {
             flex-direction: column;
+        }
+        @include abstracts.screen(sm) {
+            max-height: calc(100vh - 230px);
+            padding-bottom: 60px;
         }
     }
 }
