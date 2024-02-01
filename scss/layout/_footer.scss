@@ -2,7 +2,9 @@
 .footer {
     margin-top: 50px;
     padding: 50px 0;
+    font-size: 1.4rem;
     background: var(--footer-bg-color);
+
     &__row {
         display: grid;
         grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
@@ -18,7 +20,6 @@
     }
     &__desc {
         margin-top: 30px;
-        font-size: 1.5rem;
         line-height: 1.5;
         @include abstracts.screen(lg) {
             width: min(400px, 100%);
@@ -26,7 +27,6 @@
     }
     &__help-text {
         margin-top: 40px;
-        font-size: 1.4rem;
         line-height: 1.4;
     }
     &__heading {
@@ -89,6 +89,7 @@
         }
         @include abstracts.screen(md) {
             width: 50%;
+            font-size: 1.6rem;
         }
         @include abstracts.screen(sm) {
             flex: 1;
@@ -104,9 +105,6 @@
             gap: 50px;
         }
     }
-    &__copyright {
-        font-size: 1.4rem;
-    }
     &__socials {
         display: flex;
         align-items: center;
@@ -120,7 +118,10 @@
         width: 32px;
         height: 32px;
         border-radius: 6px;
-
+        @include abstracts.screen(sm) {
+            width: 42px;
+            height: 42px;
+        }
         filter: grayscale(50%);
         transition: translate, filter;
         transition-duration: 0.3s;
@@ -148,5 +149,8 @@
         width: 14px;
         filter: brightness(0) saturate(100%) invert(100%) sepia(3%)
             saturate(12%) hue-rotate(103deg) brightness(105%) contrast(105%);
+        @include abstracts.screen(sm) {
+            width: 18px;
+        }
     }
 }
