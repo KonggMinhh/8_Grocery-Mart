@@ -85,16 +85,12 @@
                         money.
                     </p>
                     <!-- Form -->
-                    <form
-                        action="./index-logined.html"
-                        class="form auth__form"
-                        novalidate
-                    >
+                    <form action="./index-logined.html" class="form auth__form">
                         <!-- Email -->
                         <div class="form__group">
                             <div class="form__text-input">
                                 <input
-                                    type="text"
+                                    type="email"
                                     class="form__input"
                                     id=""
                                     placeholder="Email"
@@ -105,7 +101,15 @@
                                     alt=""
                                     class="form__input-icon"
                                 />
+                                <img
+                                    src="./assets/icons/warning.svg"
+                                    alt=""
+                                    class="form__input-icon-error"
+                                />
                             </div>
+                            <p class="form__error">
+                                Email chưa đúng định dạng !
+                            </p>
                         </div>
                         <!-- Password -->
                         <div class="form__group">
@@ -116,13 +120,20 @@
                                     id=""
                                     placeholder="Password"
                                     required
+                                    minlength="6"
                                 />
                                 <img
                                     src="./assets/icons/lock.svg"
                                     alt=""
                                     class="form__input-icon"
                                 />
+                                <img
+                                    src="./assets/icons/warning.svg"
+                                    alt=""
+                                    class="form__input-icon-error"
+                                />
                             </div>
+                            <p class="form__error">Mật khẩu ít nhất 6 kí tự</p>
                         </div>
                         <!-- Confirm Password -->
                         <div class="form__group">
@@ -133,13 +144,20 @@
                                     id=""
                                     placeholder="Confirm Password"
                                     required
+                                    minlength="6"
                                 />
                                 <img
                                     src="./assets/icons/lock.svg"
                                     alt=""
                                     class="form__input-icon"
                                 />
+                                <img
+                                    src="./assets/icons/warning.svg"
+                                    alt=""
+                                    class="form__input-icon-error"
+                                />
                             </div>
+                            <p class="form__error">Mật khẩu ít nhất 6 kí tự</p>
                         </div>
                         <!-- Form Card -->
                         <div class="form__group form__group--inline">
@@ -148,7 +166,8 @@
                                     type="checkbox"
                                     name=""
                                     id=""
-                                    class="form__checkbox-input"
+                                    class="form__checkbox-input d-none"
+                                    checked
                                 />
                                 <span class="form__checkbox-label"
                                     >Set as default card</span
@@ -160,7 +179,9 @@
                         </div>
                         <!-- Form Button -->
                         <div class="form__group auth__btn-group">
-                            <button class="btn btn--primary auth__btn">
+                            <button
+                                class="btn btn--primary auth__btn form__submit-btn"
+                            >
                                 Sign Up
                             </button>
                             <button
@@ -171,7 +192,7 @@
                                     alt=""
                                     class="btn__icon"
                                 />
-                                Sign in with Gmail
+                                Sign in with Google
                             </button>
                         </div>
 

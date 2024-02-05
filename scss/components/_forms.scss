@@ -1,9 +1,26 @@
 .form {
+    &:has(:invalid) &__submit-btn {
+        opacity: 0.5;
+        pointer-events: none;
+    }
     &__group {
         margin-top: 30px;
         &--inline {
             display: flex;
             align-items: center;
+        }
+    }
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: red;
+            background: rgba($color: red, $alpha: 0.1);
+        }
+        .form__error,
+        .form__input-icon-error {
+            display: block;
+        }
+        .form__input-icon {
+            display: none;
         }
     }
     &__text-input {
@@ -26,25 +43,69 @@
         font-weight: 500;
         line-height: 144.444%;
 
+        &-icon-error,
         &-icon {
             margin-left: 12px;
         }
         &::placeholder {
             color: #d2d1d6;
         }
+        &-icon-error {
+            display: none;
+            animation: shake 0.8s;
+        }
+    }
+    &__error {
+        text-align: left;
+        font-weight: 500;
+        margin-top: 10px;
+        font-size: 1.4rem;
+        color: red;
+        display: none;
     }
     &__pull-right {
         margin-left: auto;
     }
     &__checkbox {
+        position: relative;
         display: flex;
         align-items: center;
-        gap: 10px;
+        user-select: none;
+
         &-label {
+            margin-left: 29px;
             color: #9e9da8;
             font-size: 1.5rem;
             font-weight: 500;
             line-height: 146.667%;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 5px;
+            border: 1.5px solid #9e9da8;
+        }
+    }
+    &__checkbox:has(:checked) {
+        &::before {
+            background: #ffb700;
+            border-color: #ffb700;
+        }
+        &::after {
+            content: "";
+            width: 6px;
+            height: 10px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            position: absolute;
+            top: 5px;
+            left: 7px;
+            transform: rotate(45deg);
         }
     }
 }
