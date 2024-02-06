@@ -3,6 +3,10 @@
 .auth {
     display: flex;
     min-height: 100vh;
+    @supports (-webkit-touch-callout: none) {
+        min-height: -webkit-fill-available;
+    }
+
     &__intro,
     &__content {
         flex: 1;
@@ -39,6 +43,9 @@
             font-weight: 500;
             font-size: 1.8rem;
             line-height: 144.444%;
+            @include abstracts.screen(md) {
+                font-size: 1.5rem;
+            }
         }
     }
     &__content {
@@ -69,6 +76,9 @@
         font-weight: 500;
         font-size: 3rem;
         line-height: 146.667%;
+        @include abstracts.screen(md) {
+            font-size: 2.2rem;
+        }
     }
     &__desc {
         margin-top: 10px;
@@ -77,16 +87,25 @@
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
     &__form {
         margin-top: 30px;
         width: 100%;
+        @include abstracts.screen(md) {
+            margin-top: initial;
+        }
     }
     &__link {
         color: #0071dc;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__btn-group {
@@ -103,5 +122,11 @@
         color: #9e9da8;
         font-size: 1.8rem;
         line-height: 144.444%;
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+        &-link {
+            font-size: inherit;
+        }
     }
 }
