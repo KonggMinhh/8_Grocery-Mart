@@ -7,6 +7,9 @@ $error-color: #dc3545;
     }
     &__group {
         margin-top: 30px;
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
         &--inline {
             display: flex;
             align-items: center;
@@ -53,7 +56,7 @@ $error-color: #dc3545;
             margin-left: 12px;
         }
         &::placeholder {
-            color: #d2d1d6;
+            color: var(--form-placeholder-color);
         }
         &-icon-error {
             display: none;

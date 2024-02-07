@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -93,6 +93,7 @@
                                     type="email"
                                     class="form__input"
                                     id=""
+                                    value="admin@grocerymart.com"
                                     placeholder="Email"
                                     required
                                 />
@@ -117,6 +118,7 @@
                                 <input
                                     type="password"
                                     class="form__input"
+                                    value="1111111"
                                     id=""
                                     placeholder="Password"
                                     required
@@ -141,6 +143,7 @@
                                 <input
                                     type="password"
                                     class="form__input"
+                                    value="1111111"
                                     id=""
                                     placeholder="Confirm Password"
                                     required
@@ -189,7 +192,7 @@
                                 <img
                                     src="./assets/icons/google.svg"
                                     alt=""
-                                    class="btn__icon"
+                                    class="btn__icon icon"
                                 />
                                 Sign in with Google
                             </button>
@@ -197,7 +200,9 @@
 
                         <p class="auth__text">
                             You have an account yet?
-                            <a href="#!" class="auth__link auth__text-link"
+                            <a
+                                href="./sign-in.html"
+                                class="auth__link auth__text-link"
                                 >Sign In</a
                             >
                         </p>
@@ -205,6 +210,7 @@
                 </div>
             </div>
         </main>
+        <!-- Javascript -->
         <script>
             window.dispatchEvent(new Event("template-loaded"));
         </script>

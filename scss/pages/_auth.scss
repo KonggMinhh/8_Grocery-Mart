@@ -20,6 +20,7 @@
         justify-content: center;
         align-items: center;
         row-gap: 50px;
+        background: var(--auth-intro-bg);
 
         &-logo {
             position: absolute;
@@ -38,11 +39,12 @@
         }
 
         &-text {
-            min-width: 412px;
+            max-width: 412px;
             text-align: center;
             font-weight: 500;
             font-size: 1.8rem;
             line-height: 144.444%;
+            color: var(--auth-intro-text-color);
             @include abstracts.screen(md) {
                 font-size: 1.5rem;
             }
@@ -69,6 +71,9 @@
             width: min(460px, 100%);
             margin: 0 auto;
             padding: 50px 0;
+            @include abstracts.screen(md) {
+                padding: 32px 0;
+            }
         }
     }
     &__heading {
@@ -76,7 +81,9 @@
         font-weight: 500;
         font-size: 3rem;
         line-height: 146.667%;
+        color: var(--auth-heading-color);
         @include abstracts.screen(md) {
+            margin-top: 40px;
             font-size: 2.2rem;
         }
     }
@@ -89,6 +96,9 @@
         line-height: 146.667%;
         @include abstracts.screen(md) {
             font-size: 1.4rem;
+        }
+        &--sign-up {
+            padding: initial;
         }
     }
     &__form {
@@ -113,6 +123,10 @@
         flex-direction: column;
         gap: 30px;
         margin-top: 50px;
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+            gap: 20px;
+        }
     }
     &__btn {
         width: 100%;
@@ -123,6 +137,7 @@
         font-size: 1.8rem;
         line-height: 144.444%;
         @include abstracts.screen(md) {
+            margin-top: 40px;
             font-size: 1.6rem;
         }
         &-link {
