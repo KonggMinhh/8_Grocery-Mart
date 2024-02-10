@@ -15,8 +15,7 @@
     @include abstracts.screen(md) {
         gap: 16px;
     }
-    &__item {
-    }
+
     &__link {
         display: flex;
         align-items: center;
@@ -37,7 +36,5 @@
         @include abstracts.screen(md) {
             font-size: 1.4rem;
         }
-    }
-    &__icon {
     }
 }
