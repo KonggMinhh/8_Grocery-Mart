@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .product-page {
     display: flex;
     flex-direction: column;
@@ -10,9 +12,17 @@
 }
 .prod-preview {
     padding: 0 30px;
+    @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
     &__list {
         display: flex;
         overflow: hidden;
+        @include abstracts.screen(lg) {
+            flex: 1;
+        }
     }
     &__item {
         position: relative;
@@ -34,6 +44,13 @@
         align-items: center;
         gap: 16px;
         padding: 30px;
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            padding-left: initial;
+        }
+        @include abstracts.screen(md) {
+            display: none;
+        }
     }
     &__thumb-img {
         width: 65px;
@@ -60,6 +77,12 @@
 .prod-info {
     padding: 60px;
     background: #f6f6f6;
+    @include abstracts.screen(xxl) {
+        padding: 40px;
+    }
+    @include abstracts.screen(lg) {
+        margin-top: 30px;
+    }
     &__heading {
         font-weight: 500;
         font-size: 2.6rem;
@@ -118,7 +141,12 @@
         background-color: transparent;
     }
 }
-
+.prod-props {
+    padding-left: 30px;
+    @include abstracts.screen(xxl) {
+        padding-left: 10px;
+    }
+}
 .prod-prop {
     display: flex;
     gap: 16px;
