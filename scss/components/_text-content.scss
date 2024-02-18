@@ -1,0 +1,107 @@
+.text-content {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 600;
+    }
+    h1 {
+        font-size: 2.6rem;
+    }
+    h2 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+    h4 {
+        font-size: 1.6rem;
+    }
+    h5 {
+        font-size: 1.4rem;
+    }
+    h6 {
+        font-size: 1.2rem;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    img,
+    figure,
+    ul,
+    ol,
+    table {
+        margin: 20px 0;
+    }
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    img + em {
+        display: block;
+        font-style: italic;
+        text-align: center;
+    }
+    a {
+        color: #305dff;
+        text-decoration: underline;
+    }
+    blockquote {
+        background: rgb(48 93 255 / 10%);
+        padding: 20px;
+        border-left: 3px solid #305dff;
+        p {
+            margin: 0;
+        }
+    }
+    hr {
+        border: none;
+        height: 1.5px;
+        margin: 40px 0;
+        background: #ededed;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        th,
+        td {
+            padding: 10px;
+            border: 2px solid #ececec;
+        }
+        th {
+            font-weight: 600;
+        }
+    }
+    ul {
+        margin-left: 60px;
+        li {
+            font-weight: 500;
+            list-style: disc;
+        }
+    }
+}
+
+.text-banner {
+    position: sticky;
+    top: 20px;
+    img {
+        border-radius: 20px;
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        & + img {
+            margin-top: 20px;
+        }
+    }
+}
