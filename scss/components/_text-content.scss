@@ -69,7 +69,7 @@
         border: none;
         height: 1.5px;
         margin: 40px 0;
-        background: #ededed;
+        background: var(--text-content-hr-bg);
     }
     table {
         width: 100%;
@@ -94,7 +94,7 @@
 
 .text-banner {
     position: sticky;
-    top: 20px;
+    top: 0px;
     img {
         border-radius: 20px;
         width: 100%;
