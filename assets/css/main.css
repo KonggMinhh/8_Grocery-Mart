@@ -1349,9 +1349,13 @@ html.dark {
   --top-act-group-bg-color: #292e39;
   --top-act-group-shadow: rgba(0, 0, 0, 0.2);
   --top-act-group-separate: #ededf6;
+  --header-act-dropdown-bg: #2f3441;
+  --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+  --header-act-dropdown-border-color: #171c28;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: #2f3441;
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%)
+      saturate(487%) hue-rotate(185deg) brightness(89%) contrast(88%);
   --top-menu-border-color: #171c28;
   --menu-column-icon-color: brightness(0) saturate(100%) invert(100%)
       sepia(10%) saturate(3491%) hue-rotate(115deg) brightness(122%)
@@ -1416,6 +1420,7 @@ html {
   --top-act-group-separate: #ededf6;
   --header-act-dropdown-bg: #fff;
   --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --header-act-dropdown-border-color: #d2d1d6;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --dropdown-arrow-color: #fff;
@@ -1678,8 +1683,13 @@ html {
 .top-act__group--single .top-act__btn {
   padding: 13px;
 }
-.top-act__btn {
+.top-act__btn-wrap {
   position: relative;
+}
+.top-act__btn-wrap:hover .act-dropdown {
+  display: block;
+}
+.top-act__btn {
   column-gap: 10px;
   padding: 13px 20px;
   cursor: pointer;
@@ -1725,15 +1735,24 @@ html {
 
 .act-dropdown {
   position: absolute;
-  top: 60px;
+  top: 48px;
   right: -60px;
   width: min(500px, 100vw);
+  padding-top: 28px;
 }
 .act-dropdown__inner {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   background: var(--header-act-dropdown-bg);
   box-shadow: 0px 40px 90px 20px var(--header-act-dropdown-shadow);
+}
+.act-dropdown__arrow {
+  position: absolute;
+  top: -17px;
+  right: 90px;
+  height: 20.5px;
+  filter: var(--dropdown-arrow-color);
 }
 .act-dropdown__top {
   display: flex;
@@ -1755,7 +1774,7 @@ html {
   margin: 20px 0;
   padding: 20px 0;
   border-width: 1.5px 0;
-  border-color: #d2d1d6;
+  border-color: var(--header-act-dropdown-border-color);
   border-style: solid;
 }
 .act-dropdown__row {
@@ -1792,7 +1811,7 @@ html {
 .cart-preview-item__img-wrap {
   position: relative;
   padding-top: 100%;
-  border: 1.5px solid #ebebeb;
+  border: 1.5px solid var(--header-act-dropdown-border-color);
   border-radius: 10px;
 }
 .cart-preview-item__thumb {
