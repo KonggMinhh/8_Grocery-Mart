@@ -6,7 +6,7 @@
     min-height: 80vh;
     padding-bottom: 50px;
     &__breadcrumbs {
-        background-color: #fff;
+        background-color: var(--checkout-breadcrumbs-bg);
     }
 }
 .checkout-container {
@@ -19,8 +19,8 @@
 .cart-info {
     padding: 30px;
     border-radius: 20px;
-    background: #fff;
-    box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+    background: var(--checkout-cart-info-bg);
+    box-shadow: 0px 20px 60px 10px var(--checkout-cart-info-shadow);
 
     @include abstracts.screen(md) {
         padding: 16px;
@@ -59,7 +59,7 @@
     &__separate {
         margin: 30px 0;
         height: 1px;
-        background: #d2d1d6;
+        background: var(--check-border-color);
     }
     &__continue {
         height: 100%;
@@ -93,10 +93,10 @@
     display: flex;
     gap: 30px;
     padding: 30px 0;
-    border-bottom: 1px solid #d2d1d6;
+    border-bottom: 1px solid var(--check-border-color);
     @include abstracts.screen(md) {
         padding: 16px 0;
-
+        gap: 16px;
         &:last-child {
             border-bottom: none;
         }
@@ -181,7 +181,6 @@
         padding: 0 20px;
         border-radius: 10px;
         border: 1px solid #d2d1d6;
-        color: #1a162e;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 146.667%;
@@ -192,6 +191,7 @@
         line-height: 145.455%;
         text-align: right;
         @include abstracts.screen(md) {
+            margin-bottom: 16px;
             text-align: left;
         }
     }
@@ -223,7 +223,7 @@
         border-radius: 14px;
 
         background: rgb(118, 68, 225, 0.1);
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        box-shadow: 0px 20px 60px 10px var(--checkout-gift-shadow);
     }
     &__title {
         font-size: 1.8rem;
