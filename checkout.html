@@ -127,7 +127,9 @@
                                                         >In Stock</span
                                                     >
                                                 </p>
-                                                <div class="cart-item__ctrl cart-item__ctrl--md-block">
+                                                <div
+                                                    class="cart-item__ctrl cart-item__ctrl--md-block"
+                                                >
                                                     <div
                                                         class="cart-item__input"
                                                     >
@@ -182,7 +184,8 @@
                                                         Save
                                                     </button>
                                                     <button
-                                                        class="cart-item__ctrl-btn"
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
                                                     >
                                                         <img
                                                             src="./assets/icons/trash.svg"
@@ -226,7 +229,9 @@
                                                         >In Stock</span
                                                     >
                                                 </p>
-                                                <div class="cart-item__ctrl cart-item__ctrl--md-block">
+                                                <div
+                                                    class="cart-item__ctrl cart-item__ctrl--md-block"
+                                                >
                                                     <div
                                                         class="cart-item__input"
                                                     >
@@ -254,7 +259,7 @@
                                                             class="cart-item__input-btn"
                                                         >
                                                             <img
-                                                            class="icon"
+                                                                class="icon"
                                                                 src="./assets/icons/plus.svg"
                                                                 alt=""
                                                             />
@@ -281,7 +286,8 @@
                                                         Save
                                                     </button>
                                                     <button
-                                                        class="cart-item__ctrl-btn"
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
                                                     >
                                                         <img
                                                             src="./assets/icons/trash.svg"
@@ -326,7 +332,9 @@
                                                         >In Stock</span
                                                     >
                                                 </p>
-                                                <div class="cart-item__ctrl cart-item__ctrl--md-block">
+                                                <div
+                                                    class="cart-item__ctrl cart-item__ctrl--md-block"
+                                                >
                                                     <div
                                                         class="cart-item__input"
                                                     >
@@ -381,7 +389,8 @@
                                                         Save
                                                     </button>
                                                     <button
-                                                        class="cart-item__ctrl-btn"
+                                                        class="cart-item__ctrl-btn js-toggle"
+                                                        toggle-target="#delete-confirm"
                                                     >
                                                         <img
                                                             src="./assets/icons/trash.svg"
@@ -503,5 +512,30 @@
         <script>
             load("#footer", "./templates/footer.html");
         </script>
+
+        <!-- Dialog / modal -->
+        <div id="delete-confirm" class="dialog hide">
+            <div class="dialog__content">
+                <div class="dialog__text">Lorem ipsum dolor sit</div>
+                <div class="dialog__bottom">
+                    <button
+                        class="btn btn--small btn--text dialog__btn js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Cancel
+                    </button>
+                    <button
+                        class="btn btn--small btn--primary dialog__btn btn--no-margin js-toggle"
+                        toggle-target="#delete-confirm"
+                    >
+                        Confirm
+                    </button>
+                </div>
+            </div>
+            <div
+                class="dialog__overlay js-toggle"
+                toggle-target="#delete-confirm"
+            ></div>
+        </div>
     </body>
 </html>

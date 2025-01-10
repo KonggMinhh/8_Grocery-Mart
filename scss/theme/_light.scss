@@ -10,10 +10,6 @@ html {
     --top-act-group-shadow: rgba(237, 237, 246, 0.2);
     --top-act-group-separate: #ededf6;
 
-    @include abstracts.screen(lg) {
-        --header-bg-color: #fff;
-        --header-shadow-color: rgba(237, 237, 246, 0.2);
-    }
     // Header
     --header-act-dropdown-bg: #fff;
     --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
@@ -33,9 +29,6 @@ html {
     --cate-item-bg: #eee;
     --cate-item-thumb-bg: #fff;
     --cate-item-title-color: #000;
-    @include abstracts.screen(md) {
-        --cate-item-bg: #fff;
-    }
 
     // Buttons
     --filter-btn-color: #6c6c72;
@@ -52,9 +45,6 @@ html {
 
     // Auth
     --auth-content-bg: #fff;
-    @include abstracts.screen(md) {
-        --auth-intro-bg: #fff;
-    }
 
     // Forms
     --form-placeholder-color: #d2d1d6;
@@ -65,27 +55,15 @@ html {
     --product-detail-info-content-bg: #fff;
     --product-detail-tag-bg: #ededf6;
 
-    @include abstracts.screen(md) {
-        --product-detail-bg: #fafafd;
-        --product-detail-info-bg: #fff;
-    }
-
     // Breadcrumbs
     --breadcrumbs-bg: #f6f6f6;
     --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
-    @include abstracts.screen(md) {
-        --breadcrumbs-bg: #fff;
-    }
 
     // Search bar
     --search-bar-bg: #fff;
 
     // Review card
     --review-card-bg: #fafafd;
-
-    @include abstracts.screen(md) {
-        --review-card-bg: #fff;
-    }
 
     // Text content
     --text-content-hr-bg: #ededed;
@@ -96,4 +74,31 @@ html {
     --checkout-cart-info-shadow: rgba(237, 237, 246, 0.2);
     --checkout-border-color: #d2d1d6;
     --checkout-gift-shadow: rgba(237, 237, 246, 0.2);
+
+    // Dialog
+    --dialog-bg: #fff;
+    --dialog-shadow: rgba(237, 237, 246, 0.2);
+
+
+
+    @include abstracts.screen(lg) {
+        --header-bg-color: #fff;
+        --header-shadow-color: rgba(237, 237, 246, 0.2);
+    }
+    @include abstracts.screen(md) {
+        --cate-item-bg: #fff;
+    }
+    @include abstracts.screen(md) {
+        --auth-intro-bg: #fff;
+    }
+    @include abstracts.screen(md) {
+        --product-detail-bg: #fafafd;
+        --product-detail-info-bg: #fff;
+    }
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #fff;
+    }
+    @include abstracts.screen(md) {
+        --review-card-bg: #fff;
+    }
 }
