@@ -28,22 +28,35 @@ $error-color: #dc3545;
             display: none;
         }
     }
+
+    &__text-area,
     &__text-input {
         display: flex;
         align-items: center;
-
-        height: 50px;
         padding: 0 12px;
         border-radius: 10px;
         border: 1.5px solid #d2d1d6;
         &:focus-within {
             border-color: #77dae6;
         }
+    }
+    &__text-area {
+        height: 120px;
+        padding: 12px;
+        &-input {
+            width: 100%;
+            resize: none;
+        }
+    }
+    &__text-input {
+        height: 50px;
+
         @include abstracts.screen(md) {
             height: 48px;
         }
     }
-    &__input {
+    &__input,
+    &__text-area-input {
         flex: 1;
         height: 100%;
 
@@ -51,19 +64,21 @@ $error-color: #dc3545;
         font-weight: 500;
         line-height: 144.444%;
 
-        &-icon-error,
-        &-icon {
-            margin-left: 12px;
-        }
         &::placeholder {
             color: var(--form-placeholder-color);
         }
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
+    }
+    &__input {
+        &-icon {
+            margin-left: 12px;
+        }
+
         &-icon-error {
             display: none;
             animation: shake 0.5s;
-        }
-        @include abstracts.screen(md) {
-            font-size: 1.6rem;
         }
     }
     &__error {
