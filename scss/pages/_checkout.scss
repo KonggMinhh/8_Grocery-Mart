@@ -26,6 +26,8 @@
         padding: 16px;
     }
     &__heading {
+        display: flex;
+        align-items: center;
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 141.667%;
