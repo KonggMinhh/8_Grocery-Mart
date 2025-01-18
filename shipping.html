@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -818,7 +818,8 @@
                                 <input
                                     id="city"
                                     type="text"
-                                    class="form__input"
+                                    class="form__input js-toggle"
+                                    toggle-target="#city-dialog"
                                     placeholder="City/District/Town"
                                 />
                                 <img
@@ -826,6 +827,42 @@
                                     alt=""
                                     class="form__input-icon-error"
                                 />
+                                <!-- Form search -->
+                                <div id="city-dialog" class="form__select-dialog hide">
+                                    <div class="form__search">
+                                        <input
+                                            class="form__search-input"
+                                            type="text"
+                                            placeholder="Search"
+                                        />
+                                        <img
+                                            src="./assets/icons/search.svg"
+                                            class="form__search-icon"
+                                            alt="Search"
+                                        />
+                                    </div>
+                                    <ul class="form__options-list">
+                                        <li class="form__option">Ha Noi</li>
+                                        <li
+                                            class="form__option form__option--current"
+                                        >
+                                            Ha Noi
+                                        </li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                        <li class="form__option">Ha Noi</li>
+                                    </ul>
+                                </div>
                             </div>
                             <p class="form__error">
                                 Phone must be at least 11 characters
