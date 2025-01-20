@@ -1,8 +1,8 @@
 @use "../abstracts";
 html {
     --text-color: #1a162e;
-    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(18%) saturate(1959%)
-        hue-rotate(210deg) brightness(87%) contrast(96%);
+    --icon-color: brightness(0) saturate(100%) invert(9%) sepia(18%)
+        saturate(1959%) hue-rotate(210deg) brightness(87%) contrast(96%);
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
     --footer-bg-color: var(--header-bg-color);
@@ -48,6 +48,10 @@ html {
 
     // Forms
     --form-placeholder-color: #d2d1d6;
+    --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+    --form-select-dialog-bg: #fff;
+    --form-option-hover-bg: #ebebeb;
+
 
     // Product detail
     --product-detail-bg: #fff;
@@ -78,8 +82,6 @@ html {
     // Dialog
     --dialog-bg: #fff;
     --dialog-shadow: rgba(237, 237, 246, 0.2);
-
-
 
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
