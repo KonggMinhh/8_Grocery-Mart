@@ -81,6 +81,13 @@
     &--rounded {
         border-radius: 99px;
     }
+
+    // Btn danger
+    &--danger {
+        color: #fff;
+        background-color: #ed4337;
+    }
+
     // Btn Disabled
     &[disabled],
     &--disabled {
