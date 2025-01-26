@@ -3931,6 +3931,13 @@ html {
 .cart-info__next-btn {
   margin-top: 30px;
 }
+.cart-info__edit-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.8rem;
+  line-height: 144.444%;
+}
 
 .cart-item {
   display: flex;
@@ -4169,13 +4176,6 @@ html {
   height: 100%;
   display: flex;
   align-items: end;
-}
-.address-card__ctrl-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 1.8rem;
-  line-height: 144.444%;
 }
 .address-card__checkbox {
   position: relative;

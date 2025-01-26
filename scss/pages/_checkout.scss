@@ -101,6 +101,13 @@
     &__next-btn {
         margin-top: 30px;
     }
+    &__edit-btn {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.8rem;
+        line-height: 144.444%;
+    }
 }
 .cart-item {
     display: flex;
@@ -281,9 +288,6 @@
         line-height: 146.667%;
     }
 
-    &__list {
-    }
-
     &__message {
         margin-top: 30px;
         font-weight: 500;
@@ -304,8 +308,6 @@
         flex: 1;
         display: flex;
         gap: 16px;
-    }
-    &__info {
     }
     &__title {
         font-size: 1.8rem;
@@ -336,13 +338,6 @@
         height: 100%;
         display: flex;
         align-items: end;
-        &-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            line-height: 144.444%;
-        }
     }
     &__checkbox {
         position: relative;
