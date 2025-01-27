@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -134,13 +134,15 @@
 
                                 <!-- Payment item 1 -->
                                 <article class="payment-item">
-                                    <h3 class="payment-item__title">
-                                        Imran Khan
-                                    </h3>
-                                    <p class="payment-item__desc">
-                                        Museum of Rajas, Sylhet Sadar, Sylhet
-                                        3100.
-                                    </p>
+                                    <div class="payment-item__content">
+                                        <h3 class="payment-item__title">
+                                            Imran Khan
+                                        </h3>
+                                        <p class="payment-item__desc">
+                                            Museum of Rajas, Sylhet Sadar,
+                                            Sylhet 3100.
+                                        </p>
+                                    </div>
                                 </article>
                                 <!-- Payment item 2 -->
                                 <article class="payment-item">
@@ -173,17 +175,74 @@
                                 </h3>
 
                                 <!-- Payment item 3 -->
-                                <article class="payment-item">
-                                    <img src="" alt="" class="payment-item__thumb">
-                                    <div class="payment-item__content">
-                                        <h3 class="payment-item__title">
-                                            Items details
-                                        </h3>
-                                        <p class="payment-item__desc">
-                                            2 items
-                                        </p>
-                                    </div>
-                                </article>
+                                <label>
+                                    <article
+                                        class="payment-item payment-item--pointer"
+                                    >
+                                        <img
+                                            src="./assets/img/payment/delivery-01.png"
+                                            alt=""
+                                            class="payment-item__thumb"
+                                        />
+                                        <div class="payment-item__content">
+                                            <h3 class="payment-item__title">
+                                                Fedex Delivery
+                                            </h3>
+                                            <p
+                                                class="payment-item__desc payment-item__desc--low"
+                                            >
+                                                Delivery: 2-3 days work
+                                            </p>
+                                        </div>
+                                        <span
+                                            class="cart-info__checkbox payment-item__checkbox"
+                                        >
+                                            <input
+                                                type="radio"
+                                                name="delivery-method"
+                                                checked
+                                                class="cart-info__checkbox-input payment-item__checkbox-input"
+                                            />
+                                            <span class="payment-item__cost"
+                                                >Free
+                                            </span>
+                                        </span>
+                                    </article>
+                                </label>
+                                <!-- Payment item 4 -->
+                                <label>
+                                    <article
+                                        class="payment-item payment-item--pointer"
+                                    >
+                                        <img
+                                            src="./assets/img/payment/delivery-02.png"
+                                            alt=""
+                                            class="payment-item__thumb"
+                                        />
+                                        <div class="payment-item__content">
+                                            <h3 class="payment-item__title">
+                                                DHL Delivery
+                                            </h3>
+                                            <p
+                                                class="payment-item__desc payment-item__desc--low"
+                                            >
+                                                Delivery: 2-3 days work
+                                            </p>
+                                        </div>
+                                        <span
+                                            class="cart-info__checkbox payment-item__checkbox"
+                                        >
+                                            <input
+                                                type="radio"
+                                                name="delivery-method"
+                                                class="cart-info__checkbox-input payment-item__checkbox-input"
+                                            />
+                                            <span class="payment-item__cost"
+                                                >$12.00</span
+                                            >
+                                        </span>
+                                    </article>
+                                </label>
                             </div>
                         </div>
                         <!-- Checkout right -->
