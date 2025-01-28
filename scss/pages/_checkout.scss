@@ -29,6 +29,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 30px;
     }
     &__heading {
         display: flex;
@@ -143,6 +144,10 @@
                 content: url("../icons/checkbox-checked.svg");
             }
         }
+    }
+    &__form-row {
+        flex-direction: row;
+        gap: 20px;
     }
 }
 .cart-item {
@@ -384,7 +389,11 @@
     margin-top: 30px;
     padding: 20px;
     border-radius: 20px;
-    background: #f6f6f6;
+    background: var(--checkout-payment-item-bg);
+
+    @include abstracts.screen(sm) {
+        align-items: start;
+    }
     &--pointer {
         cursor: pointer;
     }
@@ -394,8 +403,19 @@
         object-fit: cover;
     }
 
-    &__content {
+    &__info {
         flex: 1;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex: 1;
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: start;
+        }
     }
 
     &__title {
