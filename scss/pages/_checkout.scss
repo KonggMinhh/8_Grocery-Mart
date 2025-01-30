@@ -90,6 +90,13 @@
             font-size: 2.2rem;
             font-weight: 700;
         }
+        &-md--block {
+            @include abstracts.screen(md) {
+                flex-direction: column;
+                align-items: start;
+                gap: 20px;
+            }
+        }
     }
     &__separate {
         margin: 30px 0;
@@ -152,6 +159,11 @@
 
     &__check-all {
         margin: 30px 0;
+    }
+    &__checkout-all {
+        @include abstracts.screen(md) {
+            width: 100%;
+        }
     }
 }
 .cart-item {
@@ -227,6 +239,11 @@
         display: flex;
         align-items: center;
         gap: 30px;
+
+        @include abstracts.screen(lg) {
+            flex-direction: column;
+            align-items: start;
+        }
     }
     &__ctrl {
         display: flex;
@@ -234,6 +251,9 @@
         gap: 20px;
         margin-top: auto;
         min-height: 44px;
+        @include abstracts.screen(md) {
+            gap: 10px;
+        }
         &--md-block {
             @include abstracts.screen(md) {
                 flex-direction: column;
@@ -281,6 +301,9 @@
     }
     &__checkout-btn {
         margin-top: auto;
+        @include abstracts.screen(md) {
+            max-width: 200px;
+        }
     }
 }
 
