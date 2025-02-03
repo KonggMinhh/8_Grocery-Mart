@@ -6,8 +6,8 @@
     &__sidebar {
         padding-bottom: 30px;
         border-radius: 20px;
-        background: #fff;
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        background: var(--profile-sidebar-bg);
+        box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
         overflow: hidden;
     }
     &-user {
@@ -21,7 +21,7 @@
                 #1a162e 100%
             ),
             url("../img/profile/cover.png") no-repeat center / cover;
-        box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+        box-shadow: 0px 20px 60px 10px var(--profile-sidebar-shadow);
         color: #fff;
 
         &__avatar {
@@ -72,7 +72,7 @@
             transition: background-color 0.2s;
 
             &:hover {
-                background: #ebebeb;
+                background: var(--profile-sidebar-link-hover);
             }
         }
         &__icon {
@@ -86,25 +86,5 @@
 
     &__desc {
         margin-bottom: 16px;
-    }
-}
-.new-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 14px;
-    height: 100%;
-    border-radius: 10px;
-    border: 1px dashed #d2d1d6;
-    transition: background 0.3s;
-    &__text {
-        color: #d2d1d6;
-        font-size: 1.4rem;
-        font-weight: 500;
-        line-height: 142.857%;
-    }
-    &:hover {
-        background: rgb(210, 209, 214, 0.3);
     }
 }

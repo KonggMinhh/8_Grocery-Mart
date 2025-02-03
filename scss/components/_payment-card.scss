@@ -86,3 +86,24 @@
         }
     }
 }
+.new-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    height: 100%;
+    min-height: 170px;
+    border-radius: 10px;
+    border: 1px dashed #d2d1d6;
+    transition: background 0.3s;
+    &__text {
+        color: #d2d1d6;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 142.857%;
+    }
+    &:hover {
+        background: rgb(210, 209, 214, 0.3);
+    }
+}
