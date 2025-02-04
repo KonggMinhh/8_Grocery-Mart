@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Add new card | Grocery Mart</title>
+        <title>Edit personal info | Grocery Mart</title>
         <!-- FAVICON -->
         <link
             rel="apple-touch-icon"
@@ -90,7 +90,7 @@
                                     <ul class="profile-menu__list">
                                         <li>
                                             <a
-                                                href="./edit-personal-info.html"
+                                                href=""
                                                 class="profile-menu__link"
                                             >
                                                 <span
@@ -283,7 +283,7 @@
                                                     class="icon cart-info__back-arrow"
                                                 />
                                             </a>
-                                            Add credit or debit card
+                                            Personal info
                                         </h2>
                                         <!-- Form -->
                                         <form
@@ -294,9 +294,9 @@
                                             <div class="form__row">
                                                 <div class="form__group">
                                                     <label
-                                                        for="first-name"
+                                                        for="full-name"
                                                         class="form__label form-card__label"
-                                                        >First Name</label
+                                                        >Full Name</label
                                                     >
                                                     <div
                                                         class="form__text-input"
@@ -304,8 +304,8 @@
                                                         <input
                                                             type="text"
                                                             class="form__input"
-                                                            id="first-name"
-                                                            placeholder="Imran"
+                                                            id="full-name"
+                                                            placeholder="Imran Khan"
                                                             required
                                                             autofocus
                                                         />
@@ -322,18 +322,18 @@
                                                 </div>
                                                 <div class="form__group">
                                                     <label
-                                                        for="last-name"
+                                                        for="email-address"
                                                         class="form__label form-card__label"
-                                                        >Last Name</label
+                                                        >Email address</label
                                                     >
                                                     <div
                                                         class="form__text-input"
                                                     >
                                                         <input
-                                                            type="text"
+                                                            type="email"
                                                             class="form__input"
-                                                            id="last-name"
-                                                            placeholder="Khan"
+                                                            id="email-address"
+                                                            placeholder="admin@uihut.com"
                                                             required
                                                         />
                                                         <img
@@ -348,22 +348,22 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <!-- Card Information -->
+                                            <!-- Phone number -->
                                             <div class="form__row">
                                                 <div class="form__group">
                                                     <label
-                                                        for="card-number"
+                                                        for="phone-number"
                                                         class="form__label form-card__label"
-                                                        >Card Information</label
+                                                        >Phone number</label
                                                     >
                                                     <div
                                                         class="form__text-input"
                                                     >
                                                         <input
-                                                            type="text"
+                                                            type="tel"
                                                             class="form__input"
-                                                            id="card-number"
-                                                            placeholder="Card Number"
+                                                            id="phone-number"
+                                                            placeholder="+008 01234 56789"
                                                             required
                                                         />
                                                         <img
@@ -379,17 +379,17 @@
                                                 </div>
                                                 <div class="form__group">
                                                     <label
-                                                        for="expiration-date"
+                                                        for="password"
                                                         class="form__label form-card__label"
-                                                        >Expiration Date</label
+                                                        >Password</label
                                                     >
                                                     <div
                                                         class="form__text-input"
                                                     >
                                                         <input
-                                                            type="text"
+                                                            type="password"
                                                             class="form__input"
-                                                            id="expiration-date"
+                                                            id="password"
                                                             placeholder="MM/YY"
                                                             required
                                                         />
@@ -405,85 +405,7 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <!-- CVV -->
-                                            <div class="form__row">
-                                                <div class="form__group">
-                                                    <label
-                                                        for="card-cvv"
-                                                        class="form__label form-card__label"
-                                                        >CVV</label
-                                                    >
-                                                    <div
-                                                        class="form__text-input"
-                                                    >
-                                                        <input
-                                                            type="text"
-                                                            class="form__input"
-                                                            id="card-cvv"
-                                                            placeholder="123"
-                                                            required
-                                                        />
-                                                        <img
-                                                            src="./assets/icons/warning.svg"
-                                                            alt=""
-                                                            class="form__input-icon-error"
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">
-                                                        Email is not in correct
-                                                        format!
-                                                    </p>
-                                                </div>
-                                                <div class="form__group">
-                                                    <label
-                                                        for="phone-number"
-                                                        class="form__label form-card__label"
-                                                        >Phone Number</label
-                                                    >
-                                                    <div
-                                                        class="form__text-input"
-                                                    >
-                                                        <input
-                                                            type="text"
-                                                            class="form__input"
-                                                            id="phone-number"
-                                                            placeholder="017"
-                                                            required
-                                                        />
-                                                        <img
-                                                            src="./assets/icons/warning.svg"
-                                                            alt=""
-                                                            class="form__input-icon-error"
-                                                        />
-                                                    </div>
-                                                    <p class="form__error">
-                                                        Email is not in correct
-                                                        format!
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <!-- Card label -->
-                                            <div class="form__group">
-                                                <label
-                                                    for="set-default-card"
-                                                    class="form__label form-card__label"
-                                                    >Card Preferences
-                                                </label>
-                                                <label class="form__checkbox">
-                                                    <input
-                                                        type="checkbox"
-                                                        name=""
-                                                        id="set-default-card"
-                                                        checked
-                                                        class="form__checkbox-input d-none"
-                                                    />
-                                                    <span
-                                                        class="form__checkbox-label"
-                                                        >Set as default
-                                                        card</span
-                                                    >
-                                                </label>
-                                            </div>
+
                                             <!-- Card bottom -->
                                             <div class="form-card__bottom">
                                                 <a
@@ -495,7 +417,7 @@
                                                 <button
                                                     class="btn btn--primary btn--rounded"
                                                 >
-                                                    Save card
+                                                    Save
                                                 </button>
                                             </div>
                                         </form>
