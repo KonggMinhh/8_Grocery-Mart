@@ -82,7 +82,17 @@ html {
     // Dialog
     --dialog-bg: #fff;
     --dialog-shadow: rgba(237, 237, 246, 0.2);
+    //  Profile
+    --profile-sidebar-bg: #fff;
+    --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
+    --profile-sidebar-link-hover: #ebebeb;
 
+    // Account info
+    --account-info-bg: #f6f6f6;
+    --account-info-icon-bg: #fff;
+
+    // Separate
+    --separate-color: #d2d1d6;
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
@@ -103,15 +113,4 @@ html {
     @include abstracts.screen(md) {
         --review-card-bg: #fff;
     }
-    //  Profile
-    --profile-sidebar-bg: #fff;
-    --profile-sidebar-shadow: rgba(237, 237, 246, 0.2);
-    --profile-sidebar-link-hover: #ebebeb;
-
-    // Account info
-    --account-info-bg: #f6f6f6;
-    --account-info-icon-bg: #fff;
-
-    // Separate
-    --separate-color: #d2d1d6;
 }

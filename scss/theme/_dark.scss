@@ -92,19 +92,6 @@ html.dark {
     // Dialog
     --dialog-bg: #2f3441;
     --dialog-shadow: rgba(23, 28, 40, 0.4);
-
-    @include abstracts.screen(lg) {
-        --header-shadow-color: rgba(0, 0, 0, 0.2);
-    }
-    @include abstracts.screen(md) {
-        --product-detail-bg: #292e39;
-        --product-detail-info-bg: transparent;
-        --product-detail-info-content-bg: #171c28;
-    }
-    @include abstracts.screen(md) {
-        --breadcrumbs-bg: #171c28;
-    }
-
     //  Profile
     --profile-sidebar-bg: #171c28;
     --profile-sidebar-shadow: rgba(23, 28, 40, 0.2);
@@ -116,4 +103,15 @@ html.dark {
 
     // Separate
     --separate-color: #292e39;
+    @include abstracts.screen(lg) {
+        --header-shadow-color: rgba(0, 0, 0, 0.2);
+    }
+    @include abstracts.screen(md) {
+        --product-detail-bg: #292e39;
+        --product-detail-info-bg: transparent;
+        --product-detail-info-content-bg: #171c28;
+    }
+    @include abstracts.screen(md) {
+        --breadcrumbs-bg: #171c28;
+    }
 }
